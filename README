@@ -1,0 +1,24 @@
+SLAM implementation in MATLab for a horizontal lidar.
+
+The code works on Linux and MacOSX (I am unsure if the mex 
+files will work as is on Windows).
+
+To run the example:
+  - Download one of the two log files:
+      log 20 - https://fling.seas.upenn.edu/~brindza/files/lir_slam_log20.tar.gz
+      log 21 - https://fling.seas.upenn.edu/~brindza/files/lir_slam_log21.tar.gz
+  - Extract the log files into the data/ directory
+  - Depending on which log you want to use set the CONFIG.lognum variable to 20 or 21 
+  - open matlab from this directory
+  - in matlab run:
+      >> run_slam
+
+The config.m file contains all the configuration variables.
+To enable merging the kinect data set the use_kinect flag to true.
+
+
+
+Jordan Brindza
+jbrindza@seas.upenn.edu
+https://fling.seas.upenn.edu/~brindza/
+
