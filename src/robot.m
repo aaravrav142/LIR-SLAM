@@ -12,7 +12,7 @@ h.encoders.ticksPerRev = CONFIG.encoders.ticksPerRev;
 h.encoders.metersPerTic = 2*pi * h.wheel.r / h.encoders.ticksPerRev; 
 
 %% robot pose 
-h.pose.ukf = ukf_quaternion([0.01; 0.05], [.002; 0.001]);
+h.pose.ukf = ukf_quaternion(CONFIG.egyro, CONFIG.eaccel);
 % position
 h.pose.p = [0; 0; 0];
 % orientation (quaternion)

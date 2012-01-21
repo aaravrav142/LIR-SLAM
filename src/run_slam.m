@@ -19,8 +19,8 @@ sts = size(imu.ts);
 d = lidar.ranges(:,1);
 
 % create low pass filters for accelerometer and gyroscope
-accelFilter = iir_filter(.01, raw2accel(imu.vals(1:3,1)));
-gyroFilter = iir_filter(.05, raw2gyro(imu.vals([5, 6, 4],1)));
+accelFilter = iir_filter(CONFIG.imu.accel.iirCoef, raw2accel(imu.vals(1:3,1)));
+gyroFilter = iir_filter(CONFIG.imu.gyro.iirCoef, raw2gyro(imu.vals([5, 6, 4],1)));
 
 % robot struct
 r = robot();

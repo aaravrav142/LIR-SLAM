@@ -2,6 +2,7 @@ global CONFIG
 
 CONFIG.lognum = 2;
 
+% occupancy grid properties
 CONFIG.map.xmin = -40;
 CONFIG.map.xmax =  40;
 CONFIG.map.ymin = -40;
@@ -37,11 +38,16 @@ CONFIG.imu.gyro.vref = [3300; 3300; 3300];
 CONFIG.imu.gyro.bias = [373; 374; 369];
 CONFIG.imu.gyro.sensitivity = [3.43; 3.53; 3.30] * (180.0/pi);
 
+% iir filter coefs
+CONFIG.imu.accel.iirCoef = 0.05; %0.01;
+CONFIG.imu.gyro.iirCoef = 0.05;
+
 % ukf pose filter parameters
-CONFIG.ukf.eaccel = [.005; 0.001];
-CONFIG.ukf.egyro = [0.01; 0.02];
+CONFIG.ukf.eaccel = [.002; 0.001]; %[.005; 0.001];
+CONFIG.ukf.egyro = [0.01; 0.05]; %[0.01; 0.02];
 
 % flag indicating if the kinect data should be used
 %   the kinect data is used to create a floor map
 %   and height map
 CONFIG.use_kinect = false;
+
