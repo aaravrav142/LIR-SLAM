@@ -1,6 +1,6 @@
 global CONFIG
 
-CONFIG.lognum = 2;
+CONFIG.lognum = 20;
 
 % occupancy grid properties
 CONFIG.map.xmin = -40;

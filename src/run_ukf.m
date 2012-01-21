@@ -10,7 +10,7 @@ vicon = load(sprintf('viconRot%d', CONFIG.lognum));
 sts = size(imu.ts);
 
 % ukf pose filter
-ukf = ukf_quaternion(CONFIG.egyro, CONFIG.eaccel);
+ukf = ukf_quaternion(CONFIG.ukf.egyro, CONFIG.ukf.eaccel);
 
 % create low pass filters for accelerometer and gyroscope
 accelFilter = iir_filter(CONFIG.imu.accel.iirCoef, raw2accel(imu.vals(1:3,1)));
