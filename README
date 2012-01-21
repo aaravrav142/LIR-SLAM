@@ -13,6 +13,15 @@ To run the example:
   - in matlab run:
       >> run_slam
 
+To test just the kalman filter:
+  - Download on the the log files:
+      https://fling.seas.upenn.edu/~brindza/files/lir_ukf_logs.tar.gz
+  - Extract the log files to the data/ directory
+  - Depending on which log you want to use set the CONFIG.lognum variable
+  - open matlab from this directory
+  - in matlab run:
+    >> run_ukf
+
 The config.m file contains all the configuration variables.
 To enable merging the kinect data set the use_kinect flag to true.
 
