@@ -1,6 +1,6 @@
 global CONFIG
 
-CONFIG.lognum = 20;
+CONFIG.lognum = 2;
 
 CONFIG.map.xmin = -40;
 CONFIG.map.xmax =  40;
